@@ -7,13 +7,13 @@
 
 ## Overview
 
-Smartphones have become one of the most widely used technologies in daily life, particularly among young adults. While they offer convenience and connectivity, concerns about overuse and addiction have grown significantly in recent years. This project uses exploratory data analysis to investigate what smartphone usage behaviors are most strongly associated with addiction levels among users aged 18 to 35. By examining patterns across screen time, social media use, age groups, and weekend behavior, this analysis aims to identify which habits most clearly separate mild users from those showing signs of severe addiction.
+Smartphones are one of the most widely used technologies in our daily lives. There are ongoing conversations, particularly among young adults, about phone usage addiction, overuse, and increasing anxiety. This project intends to use exploratory data analysis to investigate which types of phone usage behaviors are most strongly tied to addiction levels and stress among users aged 18 to 35. By analyzing patterns across screen time, social media use, age groups, and weekend behavior. This analysis aims to identify which habits clearly distinguish mild users from those showing signs of severe addiction.
 
 ---
 
 ## Research Question
 
-**What smartphone usage behaviors are most strongly associated with addiction level among users aged 18–35?**
+**What smartphone usage behaviors are most strongly associated with addiction level among users aged 18-35?**
 
 Secondary questions explored:
 - Does daily screen time clearly differ across addiction levels?
@@ -62,29 +62,26 @@ Of the 7,500 rows, 819 were missing a value for `addiction_level`. These rows we
 
 ## Key Findings
 
-### 1. Daily Screen Time Is the Strongest Indicator of Addiction
+### 1. Social media accounts for nearly half of total screen time across all addiction levels
 
-The most prominent finding in this dataset is the difference in daily screen time across addiction levels. Users classified as Mild average just **5.5 hours** of screen time per day, while Moderate users average **8.4 hours** and Severe users average **8.6 hours**. This is a gap of nearly 3 hours, which is meaningful in the context of daily life. The boxplot confirms this is not just an average effect, the entire distribution shifts upward from Mild to Moderate, with very little overlap between the two groups.
+On average, social media usage accounts for approximately 45% of users' total daily screen time across all three addiction levels, making it the single largest category of phone use in this dataset. This consistent share across all addiction levels suggests that social media is not just a minor habit but the main way of how people spend time on their phones and likely one of the biggest contributors to addiction severity.
 
-### 2. Social Media Hours Clearly Separate Mild from Addicted Users
+### 2. Weekend usage is higher across all groups, but the gap stays the same
 
-Social media usage shows a clear stepwise increase across addiction levels. Mild users average **2.3 hours** per day on social media, while Moderate users average **3.6 hours** and Severe users average **3.8 hours**. This suggests that time spent on social media platforms is closely tied to addiction severity, and may be one of the predominant factors of overall screen time for more addicted users.
+On average, users spend about two more hours on their phones on weekends compared to weekdays, regardless of addiction level. One possible explanation for the lower weekday usage is that school or work naturally limits phone time during the week, structured schedules leave less opportunity for extended screen time. However, even accounting for this, heavily addicted users do not disproportionately binge on weekends. Their higher usage is consistent throughout the week, suggesting that addiction reflects a stable behavioral pattern rather than simply taking advantage of free time when it is available.
 
-### 3. The Pattern Persists on Weekends
+### 3. Age is not a meaningful predictor of addiction
 
-One possible explanation for high screen time is that work or school requires phone use during the week. However, the weekend screen time data does not support this. Mild users average **7.3 hours** on weekends, compared to **10.1 hours** for Moderate and **10.4 hours** for Severe users. The same pattern holds, which suggests that heavy phone use for more addicted users is a consistent behavioral pattern rather than a work-related necessity.
+The age range in this dataset spans 18 to 35, covering a wide variety of life stages, college students, early career working adults, and people who may be starting families. Despite these very different lifestyles and daily responsibilities, all four age groups show a nearly identical distribution: most users fall into Moderate, fewest into Mild, with Severe in between. The fact that this pattern holds regardless of whether someone is a 19 year old college student or a 33 year old with a full time job and a family suggests that age and life stage alone do not determine addiction severity. 
 
-### 4. Older Users Are Slightly More Likely to Show Severe Addiction
+### 4. Only social media and screen time separate addiction groups, sleep and gaming do not
 
-When users are grouped by age, a mild but consistent trend emerges. Among users aged 18–21, approximately 34% fall into the Severe addiction category. This rises slightly to 36% for ages 22–25, 38% for ages 26–29, and stays at 37% for ages 30–35. Meanwhile, the percentage of Mild users decreases slightly as age increases, from 21% in the 18–21 group down to 19% in the 26–29 group. While this trend is not dramatic, it does suggest that addiction may deepen slightly with age rather than improving over time.
+The pairplot provides a broader view of how all numeric features relate to each other across addiction levels. The diagonal distribution curves for sleep hours and gaming hours show almost complete overlap between Mild, Moderate, and Severe users, meaning that how much someone sleeps or games doesn't affect the smartphone addiction level as much. A Severe user is just as likely to get 7 hours of sleep or spend 2 hours gaming on smartphones as a Mild user. The scatter plots between most variable pairs also show no clustering by color, confirming that the majority of features do not predict each other. The exception is clear in the social media and daily screen time distributions, where the green cluster visibly separates from the orange and red. These are the only two variables where addiction groups show clear distinctions, which further proves that usage behavior on social platforms is where addiction most clearly manifests.
 
-### 5. Daily and Weekend Screen Time Are Highly Correlated
+### 5. Stress level and gender do not differentiate addiction
 
-The correlation heatmap reveals one very strong relationship: daily screen time and weekend screen time have a correlation of **0.96**, which is extremely high. This means that knowing a user's daily screen time almost perfectly predicts their weekend screen time. For all other feature pairs, correlations are close to zero, indicating that variables like age, sleep hours, gaming hours, and notifications per day do not strongly predict one another in this dataset.
+Stress level is almost evenly split across all addiction groups. roughly one third Low, one third Medium, one third High in every group. Gender shows similarly flat patterns. These are important null findings. They tell us that addiction in this dataset is driven by usage behavior, not by who someone is or how stressed they feel.
 
-### 6. Stress Level and Gender Do Not Differentiate Addiction
-
-Two comparisons that initially seemed promising turned out to be flat. Stress level is almost perfectly evenly distributed across all addiction levels, roughly 33% Low, 33% Medium, and 34% High in every group. Similarly, gender showed no meaningful differences in screen time or social media hours between Male, Female, and Other users. These null findings are worth reporting because they tell us what does not predict addiction, which is as informative as what does.
 
 ---
 
