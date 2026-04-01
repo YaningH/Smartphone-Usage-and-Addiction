@@ -56,7 +56,7 @@ The dataset contains a mix of numeric and categorical features:
 
 ### Data Cleaning
 
-Of the 7,500 rows, 819 were missing a value for `addiction_level`. These rows were dropped before analysis, leaving 6,681 complete records. No other columns contained missing values. Age groups were created using `pd.cut()` to bin users into four ranges: 18–21, 22–25, 26–29, and 30–35.
+Of the 7,500 rows, 819 were missing a value for `addiction_level`. These rows were dropped before analysis, leaving 6,681 complete records. No other columns contained missing values. Age groups were created using `pd.cut()` to organize users into four ranges: 18–21, 22–25, 26–29, and 30–35.
 
 ---
 
@@ -64,11 +64,11 @@ Of the 7,500 rows, 819 were missing a value for `addiction_level`. These rows we
 
 ### 1. Daily Screen Time Is the Strongest Indicator of Addiction
 
-The most striking finding in this dataset is the difference in daily screen time across addiction levels. Users classified as Mild average just **5.5 hours** of screen time per day, while Moderate users average **8.4 hours** and Severe users average **8.6 hours**. This is a gap of nearly 3 hours, which is meaningful in the context of daily life. The boxplot confirms this is not just an average effect — the entire distribution shifts upward from Mild to Moderate, with very little overlap between the two groups.
+The most prominent finding in this dataset is the difference in daily screen time across addiction levels. Users classified as Mild average just **5.5 hours** of screen time per day, while Moderate users average **8.4 hours** and Severe users average **8.6 hours**. This is a gap of nearly 3 hours, which is meaningful in the context of daily life. The boxplot confirms this is not just an average effect, the entire distribution shifts upward from Mild to Moderate, with very little overlap between the two groups.
 
 ### 2. Social Media Hours Clearly Separate Mild from Addicted Users
 
-Social media usage shows a clear stepwise increase across addiction levels. Mild users average **2.3 hours** per day on social media, while Moderate users average **3.6 hours** and Severe users average **3.8 hours**. This suggests that time spent on social media platforms is closely tied to addiction severity, and may be one of the primary drivers of overall screen time for more addicted users.
+Social media usage shows a clear stepwise increase across addiction levels. Mild users average **2.3 hours** per day on social media, while Moderate users average **3.6 hours** and Severe users average **3.8 hours**. This suggests that time spent on social media platforms is closely tied to addiction severity, and may be one of the predominant factors of overall screen time for more addicted users.
 
 ### 3. The Pattern Persists on Weekends
 
@@ -76,7 +76,7 @@ One possible explanation for high screen time is that work or school requires ph
 
 ### 4. Older Users Are Slightly More Likely to Show Severe Addiction
 
-When users are grouped by age, a mild but consistent trend emerges. Among users aged 18–21, approximately 34% fall into the Severe addiction category. This rises slightly to 36% for ages 22–25, 38% for ages 26–29, and stays at 37% for ages 30–35. Meanwhile, the percentage of Mild users decreases slightly as age increases — from 21% in the 18–21 group down to 19% in the 26–29 group. While this trend is not dramatic, it does suggest that addiction may deepen slightly with age rather than improving over time.
+When users are grouped by age, a mild but consistent trend emerges. Among users aged 18–21, approximately 34% fall into the Severe addiction category. This rises slightly to 36% for ages 22–25, 38% for ages 26–29, and stays at 37% for ages 30–35. Meanwhile, the percentage of Mild users decreases slightly as age increases, from 21% in the 18–21 group down to 19% in the 26–29 group. While this trend is not dramatic, it does suggest that addiction may deepen slightly with age rather than improving over time.
 
 ### 5. Daily and Weekend Screen Time Are Highly Correlated
 
@@ -84,7 +84,7 @@ The correlation heatmap reveals one very strong relationship: daily screen time 
 
 ### 6. Stress Level and Gender Do Not Differentiate Addiction
 
-Two comparisons that initially seemed promising turned out to be flat. Stress level is almost perfectly evenly distributed across all addiction levels — roughly 33% Low, 33% Medium, and 34% High in every group. Similarly, gender showed no meaningful differences in screen time or social media hours between Male, Female, and Other users. These null findings are worth reporting because they tell us what does not predict addiction, which is as informative as what does.
+Two comparisons that initially seemed promising turned out to be flat. Stress level is almost perfectly evenly distributed across all addiction levels, roughly 33% Low, 33% Medium, and 34% High in every group. Similarly, gender showed no meaningful differences in screen time or social media hours between Male, Female, and Other users. These null findings are worth reporting because they tell us what does not predict addiction, which is as informative as what does.
 
 ---
 
@@ -104,18 +104,18 @@ Two comparisons that initially seemed promising turned out to be flat. Stress le
 
 ## Conclusions
 
-This analysis found that smartphone addiction level is most clearly associated with **how much time users spend on their phones**, particularly daily screen time and social media hours. The gap between Mild and Moderate/Severe users is substantial — nearly 3 hours of screen time per day — and this pattern holds consistently on weekends, suggesting it reflects a genuine behavioral difference rather than a work or school effect.
+This analysis found that smartphone addiction level is most clearly associated with **how much time users spend on their phones**, particularly daily screen time and social media hours. The gap between Mild and Moderate/Severe users is substantial, nearly 3 hours of screen time per day and this pattern holds consistently on weekends, suggesting it reflects a genuine behavioral difference rather than a work or school effect.
 
-Age shows a modest trend, with older users being slightly more likely to fall into the Severe category. However, stress level and gender showed no meaningful differences, which is a useful finding in itself — it suggests that addiction in this dataset is more strongly tied to actual usage behavior than to demographic or psychological factors.
+Age shows a modest trend, with older users being slightly more likely to fall into the Severe category. However, stress level and gender showed no meaningful differences, which is a useful finding in itself, it suggests that addiction in this dataset is more strongly tied to actual usage behavior than to demographic or psychological factors.
 
 The correlation analysis confirmed that daily and weekend screen time are almost perfectly correlated (r = 0.96), reinforcing the idea that usage patterns are consistent across the week for heavily addicted users.
 
 ### Limitations
 
 - The dataset appears to be synthetically generated, which may explain why many variables show near-zero correlations and perfectly even distributions across categories.
-- Addiction level is a self-reported or algorithmically assigned label — the exact classification criteria are not documented.
+- Addiction level is a self-reported or algorithmically assigned label, the exact classification criteria are not documented.
 - The dataset covers only users aged 18–35, so findings should not be generalized to children, teenagers, or older adults.
-- This is an observational analysis — no causal claims can be made about whether screen time causes addiction or vice versa.
+- This is an observational analysis, no causal claims can be made about whether screen time causes addiction or vice versa.
 
 ---
 
@@ -156,7 +156,3 @@ project-folder/
 ## References
 
 1. Kaggle. *Smartphone Usage and Addiction Analysis — 7500 Rows*. Retrieved from https://www.kaggle.com
-2. McKinney, W. (2017). *Python for Data Analysis*. O'Reilly Media.
-3. Waskom, M. (2021). *Seaborn: Statistical Data Visualization*. Journal of Open Source Software. https://seaborn.pydata.org
-4. Hunter, J.D. (2007). *Matplotlib: A 2D Graphics Environment*. Computing in Science & Engineering, 9(3), 90–95.
-5. pandas Development Team. *pandas: Powerful Python Data Analysis Toolkit*. https://pandas.pydata.org
