@@ -101,11 +101,11 @@ Stress level is almost evenly split across all addiction groups. roughly one thi
 
 ## Conclusions
 
-This analysis found that smartphone addiction level is most clearly associated with **how much time users spend on their phones**, particularly daily screen time and social media hours. The gap between Mild and Moderate/Severe users is substantial, nearly 3 hours of screen time per day and this pattern holds consistently on weekends, suggesting it reflects a genuine behavioral difference rather than a work or school effect.
+Overall, this analysis suggests that smartphone addiction among users aged 18 to 35 is driven far more by how people engage with their phones than by their demographics or psychological factors.. Across all findings, social media and total screen time consistently emerge as the only variables that clearly distinguish between Mild, Moderate, and Severe addiction levels. In particular, the fact that social media alone accounts for nearly half of total screen time across all groups highlights its central role in shaping user behavior and likely amplifying addictive patterns. 
 
-Age shows a modest trend, with older users being slightly more likely to fall into the Severe category. However, stress level and gender showed no meaningful differences, which is a useful finding in itself, it suggests that addiction in this dataset is more strongly tied to actual usage behavior than to demographic or psychological factors.
+At the same time, several commonly assumed factors, including age, gender, stress level, sleep, and gaming, show little to no relationship with addiction severity. These null findings are important because they challenge the idea that addiction is tied to specific demographics or emotional states. Instead, addiction appears to be a behavioral pattern that remains stable across different contexts, as also reflected in the consistent gap between weekday and weekend usage.
 
-The correlation analysis confirmed that daily and weekend screen time are almost perfectly correlated (r = 0.96), reinforcing the idea that usage patterns are consistent across the week for heavily addicted users.
+Taken together, the results indicate that the line between mild and severe smartphone addiction is not defined by life stage or external circumstances, but by intensity and type of engagement, particularly with social media. This suggests that efforts to address smartphone addiction may be more effective if they focus on modifying usage habits and platform interactions, rather than targeting specific groups of people.
 
 ### Limitations
 
